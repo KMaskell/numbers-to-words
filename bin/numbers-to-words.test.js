@@ -4,6 +4,14 @@ describe('Numbers to words', () => {
     describe('Successful', () => {
         it('should return the correct words for a passed number argument between 1 and 19', () => {
             expect(NumbersToWords('0')).toBe('zero');
+            expect(NumbersToWords('10')).toBe('ten');
+            expect(NumbersToWords('19')).toBe('nineteen');
+        });
+
+        it('should return the correct words for a passed number argument between 20 and 99', () => {
+            expect(NumbersToWords('20')).toBe('twenty');
+            expect(NumbersToWords('55')).toBe('fifty-five');
+            expect(NumbersToWords('99')).toBe('ninety-nine');
         });
     });
 

@@ -1,3 +1,5 @@
+import { Numbers } from './numbers.js';
+
 const checkForException = (num) => {
     process.on('exit', function (code) {
         return console.log(`(exit code: ${code})`);
@@ -8,6 +10,21 @@ const checkForException = (num) => {
         throw new Error('Input undefined');
     } else if (isNaN(num)) {
         throw new Error('Input is not a number');
+    } else {
+        return convert_tens(num);
+    }
+};
+
+const convert_tens = (num) => {
+    const isRound = num % 10 == 0;
+    if (num < 10) return Numbers.ones[num];
+    else if (num >= 10 && num < 20) return Numbers.teens[num - 10];
+    else {
+        const returnedString = `${Numbers.tens[Math.floor(num / 10)]}${
+            !isRound ? '-' : ''
+        }${Numbers.ones[num % 10]}`.trim();
+
+        return returnedString;
     }
 };
 
