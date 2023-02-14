@@ -1,15 +1,27 @@
 import { Numbers } from './numbers.js';
 
 const checkForException = (num) => {
-    process.on('exit', function (code) {
-        return console.log(`(exit code: ${code})`);
-    });
     if ((num > 100000) | (num < 0)) {
         throw new Error('Input is not within accepted range: 0 --> 100000');
     } else if (typeof num == 'undefined') {
         throw new Error('Input undefined');
     } else if (isNaN(num)) {
         throw new Error('Input is not a number');
+    } else {
+        return convert_thousands(num);
+    }
+};
+
+const convert_thousands = (num) => {
+    const isRound = num % 1000 == 0 || num > 1099;
+    if (num >= 1000) {
+        const returnedString = `${convert_hundreds(
+            Math.floor(num / 1000)
+        )} thousand${!isRound ? ' and' : ','} ${convert_hundreds(num % 1000)}`
+            .trim()
+            .replace('  ', ' ')
+            .replace(/,\s*$/, '');
+        return returnedString;
     } else {
         return convert_hundreds(num);
     }

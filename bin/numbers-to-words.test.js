@@ -18,6 +18,20 @@ describe('Numbers to words', () => {
             expect(NumbersToWords('101')).toBe('one hundred and one');
             expect(NumbersToWords('700')).toBe('seven hundred');
             expect(NumbersToWords('999')).toBe('nine hundred and ninety-nine');
+            expect(NumbersToWords('1000')).toBe('one thousand');
+        });
+
+        it('should return the correct words for a passed number argument between 1001 and 100000', () => {
+            expect(NumbersToWords('1101')).toBe(
+                'one thousand, one hundred and one'
+            );
+            expect(NumbersToWords('3290')).toBe(
+                'three thousand, two hundred and ninety'
+            );
+            expect(NumbersToWords('12345')).toBe(
+                'twelve thousand, three hundred and forty-five'
+            );
+            expect(NumbersToWords('100000')).toBe('one hundred thousand');
         });
     });
 
