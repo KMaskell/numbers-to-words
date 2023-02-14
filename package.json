@@ -1,19 +1,26 @@
 {
-  "name": "numbers-to-words-cli-tool",
-  "version": "1.0.0",
-  "description": "a cli tool that takes a number argument and returns the english words",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KMaskell/numbers-to-words-cli-tool.git"
-  },
-  "author": "Kat Maskell <kat.maskell@clearscore.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KMaskell/numbers-to-words-cli-tool/issues"
-  },
-  "homepage": "https://github.com/KMaskell/numbers-to-words-cli-tool#readme"
+    "name": "numbers-to-words",
+    "version": "1.0.0",
+    "description": "a cli tool that takes a number argument and returns the english words",
+    "main": "./bin/index.js",
+    "scripts": {
+        "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+    },
+    "bin": {
+        "numbers-to-words": "./bin/index.js"
+    },
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KMaskell/numbers-to-words.git"
+    },
+    "author": "Kat Maskell <kat.maskell@clearscore.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/KMaskell/numbers-to-words/issues"
+    },
+    "homepage": "https://github.com/KMaskell/numbers-to-words#readme",
+    "devDependencies": {
+        "jest": "29.4.2"
+    }
 }
