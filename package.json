@@ -22,5 +22,8 @@
     "homepage": "https://github.com/KMaskell/numbers-to-words#readme",
     "devDependencies": {
         "jest": "29.4.2"
+    },
+    "dependencies": {
+        "chalk": "5.2.0"
     }
 }
