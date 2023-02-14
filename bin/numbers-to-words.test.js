@@ -11,7 +11,13 @@ describe('Numbers to words', () => {
         it('should return the correct words for a passed number argument between 20 and 99', () => {
             expect(NumbersToWords('20')).toBe('twenty');
             expect(NumbersToWords('55')).toBe('fifty-five');
-            expect(NumbersToWords('99')).toBe('ninety-nine');
+            expect(NumbersToWords('100')).toBe('one hundred');
+        });
+
+        it('should return the correct words for a passed number argument between 101 and 1000', () => {
+            expect(NumbersToWords('101')).toBe('one hundred and one');
+            expect(NumbersToWords('700')).toBe('seven hundred');
+            expect(NumbersToWords('999')).toBe('nine hundred and ninety-nine');
         });
     });
 

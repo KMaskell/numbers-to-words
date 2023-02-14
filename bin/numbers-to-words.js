@@ -11,6 +11,18 @@ const checkForException = (num) => {
     } else if (isNaN(num)) {
         throw new Error('Input is not a number');
     } else {
+        return convert_hundreds(num);
+    }
+};
+
+const convert_hundreds = (num) => {
+    const isRound = num % 100 == 0;
+    if (num > 99) {
+        const returnedString = `${
+            Numbers.ones[Math.floor(num / 100)]
+        } hundred ${!isRound ? 'and' : ''} ${convert_tens(num % 100)}`.trim();
+        return returnedString;
+    } else {
         return convert_tens(num);
     }
 };
