@@ -1,0 +1,19 @@
+{
+  "name": "numbers-to-words-cli-tool",
+  "version": "1.0.0",
+  "description": "a cli tool that takes a number argument and returns the english words",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KMaskell/numbers-to-words-cli-tool.git"
+  },
+  "author": "Kat Maskell <kat.maskell@clearscore.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KMaskell/numbers-to-words-cli-tool/issues"
+  },
+  "homepage": "https://github.com/KMaskell/numbers-to-words-cli-tool#readme"
+}
